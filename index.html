@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules\bootstrap\dist\css\bootstrap.css"
+    />
+    <title>Fetch API Sandbox</title>
+  </head>
+
+  <body>
+    <div class="container mt-4">
+      <h1 class="display-4 mb-4">Fetch API Sandbox</h1>
+      <div class="d-flex">
+        <button class="btn btn-secondary btn-lg me-4" id="getTextBtn">
+          Get Text
+        </button>
+        <button class="btn btn-primary btn-lg me-4" id="getLocalJsonBtn">
+          Get Local Json
+        </button>
+        <button class="btn btn-success btn-lg" id="getJsonApiBtn">
+          Get Json API Data
+        </button>
+      </div>
+      <hr />
+      <div id="output"></div>
+      <form id="addTodo">
+        <div class="form-group">
+          <input
+            type="text"
+            id="titleInput"
+            class="form-control m-3"
+            placeholder="to do title ..."
+          />
+        </div>
+        <div class="form-group">
+          <label for="doneInput" class="m-3">Todo Done</label>
+          <input type="checkbox" id="doneInput" />
+        </div>
+        <input type="submit" value="submit" class="btn btn-warning m-3" />
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

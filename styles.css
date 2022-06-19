@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    rgba(201, 124, 200, 0.6194852941176471) 32%,
+    rgba(167, 255, 181, 1) 100%
+  );
+}
