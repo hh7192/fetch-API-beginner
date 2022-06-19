@@ -6,6 +6,7 @@ const output = document.querySelector("#output");
 const addTodo = document.querySelector("#addTodo");
 const titleInput = document.querySelector("#titleInput");
 const doneInput = document.querySelector("#doneInput");
+const newTodo = document.querySelector("#newTodo");
 
 // functions
 // FETCH A TEXT FILE ASYNCRONOUSLY
@@ -77,12 +78,21 @@ const addToto = (e) => {
     },
     body: JSON.stringify({
       title: todoTitle,
-      completed: doneInput.checked ? "done" : "pending",
+      completed: doneInput.checked ? "Done" : "Pending",
     }),
   })
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      newTodo.innerHTML = `
+      <div class="card card-body mb-3">
+          <h6>id: ${data.id}</h6>
+          <h3>Title: ${data.title}</h3>
+          <h4 class=${
+            data.completed === "Done" ? "text-success" : "text-primary"
+          }>${data.completed}<h4>
+      </div>
+  `;
     });
 };
 
